@@ -19,7 +19,7 @@ function App() {
           //more stuff coming
           return (
             <article key={id}>
-              <img src={image} alt={name} />
+              <img src={image} alt={name} className="person-img" />
             </article>
           );
         })}
