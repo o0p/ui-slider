@@ -6,7 +6,15 @@ function App() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
 
-  return <h2>slider project setup</h2>;
+  return (
+    <section className="section">
+      <div className="title">
+        <h2>
+          <span>/</span>Reviews
+        </h2>
+      </div>
+    </section>
+  );
 }
 
 export default App;
