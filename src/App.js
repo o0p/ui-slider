@@ -27,6 +27,9 @@ function App() {
             </article>
           );
         })}
+        <button className="prev">
+          <FiChevronLeft />
+        </button>
       </div>
     </section>
   );
