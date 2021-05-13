@@ -20,7 +20,9 @@ function App() {
           if (personIndex === index) {
             position = 'activeSlide';
           }
-
+          if (personIndex === index - 1) {
+            position = 'lastIndex';
+          }
           return (
             <article className={position} key={id}>
               <img src={image} alt={name} className="person-img" />
