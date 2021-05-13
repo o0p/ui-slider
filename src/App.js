@@ -20,8 +20,11 @@ function App() {
           if (personIndex === index) {
             position = 'activeSlide';
           }
-          if (personIndex === index - 1) {
-            position = 'lastIndex';
+          if (
+            personIndex === index - 1 ||
+            (index === 0 && personIndex === people.length - 1)
+          ) {
+            position = 'lastSlide';
           }
           return (
             <article className={position} key={id}>
