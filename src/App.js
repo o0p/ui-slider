@@ -17,6 +17,9 @@ function App() {
           const { id, image, name, title, quote } = person;
           //more stuff coming
           let position = 'nextSlide';
+          if (personIndex === index) {
+            position = 'activeSlide';
+          }
 
           return (
             <article className={position} key={id}>
