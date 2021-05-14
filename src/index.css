@@ -245,6 +245,7 @@ article {
 article.activeSlide {
   opacity: 1;
   transform: translateX(0);
+  color: #f06d06;
 }
 article.lastSlide {
   transform: translateX(-100%);
