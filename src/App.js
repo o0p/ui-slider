@@ -6,6 +6,21 @@ import data from './data';
 function App() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const lastIndex = people.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+  }, [index, people]);
+
+  useEffect(() => {
+    const lastIndex = people.length - 1;
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, people]);
+
   return (
     <section className="section">
       <div className="title">
@@ -41,6 +56,7 @@ function App() {
           <FiChevronLeft />
         </button>
         <button className="next" onClick={() => setIndex(index + 1)}>
+          {console.log(index)}
           <FiChevronRight />
         </button>
       </div>
