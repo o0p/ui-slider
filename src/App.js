@@ -12,10 +12,6 @@ function App() {
     if (index < 0) {
       setIndex(lastIndex);
     }
-  }, [index, people]);
-
-  useEffect(() => {
-    const lastIndex = people.length - 1;
     if (index > lastIndex) {
       setIndex(0);
     }
@@ -56,7 +52,6 @@ function App() {
           <FiChevronLeft />
         </button>
         <button className="next" onClick={() => setIndex(index + 1)}>
-          {console.log(index)}
           <FiChevronRight />
         </button>
       </div>
